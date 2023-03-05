@@ -14,7 +14,20 @@
     text-transform: uppercase
 
     transform: translate(30px, 55%)
-
   &__img
-
     width: 800px
+  &__badge
+    transform: translate(350px, -840px)
+    &__flag
+      transform: translate(200px, -100px)
+      width: 100px
+    &__title
+      width: 300px
+
+      animation: rotate 5s linear infinite
+      animation-play-state: paused
+      animation-delay: calc(var(--scroll) * -1s)
+
+  @keyframes rotate
+    to
+      transform: rotate(-360deg)
