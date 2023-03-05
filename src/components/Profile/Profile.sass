@@ -3,12 +3,11 @@
 .profile
   padding-top: 30px
   & .wrapper
-    display: flex
     flex-direction: column
     align-items: center
   &__title
     font-family: Masvol
-    font-size: 135px
+    font-size: 120px
     letter-spacing: 10px
     color: $white
     text-transform: uppercase
@@ -17,7 +16,9 @@
   &__img
     width: 800px
   &__badge
-    transform: translate(350px, -840px)
+    position: absolute
+    left: 1110px
+    top: 450px
     &__flag
       transform: translate(200px, -100px)
       width: 100px
@@ -26,7 +27,7 @@
 
       animation: rotate 5s linear infinite
       animation-play-state: paused
-      animation-delay: calc(var(--scroll) * -1s)
+      animation-delay: calc(var(--scroll) * -3s)
 
   @keyframes rotate
     to

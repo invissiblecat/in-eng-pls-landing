@@ -25,7 +25,7 @@ const values: { title: string }[] = [
 export const Header: React.FC<HeaderProps> = ({}) => {
   return (
     <div className="header">
-      <div className="header__wrapper">
+      <div className="wrapper__wide">
         <img src={Logo} className="header__logo" alt="IN ENGLISH PLS" />
         <div className="header__nav">
           {values.map(({ title }) => (

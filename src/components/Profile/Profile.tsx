@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Flag from "../../assets/icons/flag.png";
 import LearnIsEasy from "../../assets/icons/learn-is-easy.svg";
 import ProfilePic from "../../assets/icons/profile.png";
@@ -7,20 +7,6 @@ import { FadeInOnScroll } from "../FadeInOnScroll/FadeInOnScroll";
 import "./Profile.sass";
 
 export const Profile: React.FC = () => {
-  useEffect(() => {
-    const onScroll = () => {
-      document.body.style.setProperty(
-        "--scroll",
-        (window.scrollY / (document.body.offsetHeight - window.innerHeight)).toString()
-      );
-    };
-    window.addEventListener("scroll", onScroll);
-
-    return () => {
-      window.removeEventListener("scroll", onScroll);
-    };
-  }, []);
-
   return (
     <div className="profile">
       <div className="wrapper">
