@@ -1,4 +1,5 @@
 import React from "react";
+import { FadeInOnScroll } from "../FadeInOnScroll/FadeInOnScroll";
 import { SectionTitle } from "../SectionTitle/SectionTitle";
 import "./Section.sass";
 
@@ -15,8 +16,12 @@ export const Section: React.FC<SectionProps> = ({ title, translation, text, imgS
     <section className="section">
       <div className="wrapper" style={{ flexDirection: reverse ? "row-reverse" : "row" }}>
         <div className="section__text">
-          <SectionTitle title={title} translation={translation} />
-          <p className="section__description">{text}</p>
+          <FadeInOnScroll>
+            <SectionTitle title={title} translation={translation} />
+          </FadeInOnScroll>
+          <FadeInOnScroll delay={0.5}>
+            <p className="section__description">{text}</p>
+          </FadeInOnScroll>
         </div>
         <img className="section__img" src={imgSrc} alt={title} />
       </div>

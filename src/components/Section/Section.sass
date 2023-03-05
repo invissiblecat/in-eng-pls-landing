@@ -5,9 +5,12 @@
   & .wrapper
     justify-content: space-between
   &__img
-    width: 350px
+    width: 400px
+    animation: 3s linear slide-in
+    animation-play-state: paused
+    animation-delay: calc(var(--scroll) * -2.3s)
   &__text
-    padding-top: 50px
+    margin-top: 50px
   &__description
     padding-top: 60px
     max-width: 550px
@@ -17,3 +20,9 @@
     font-size: 20px
     line-height: 140%
     text-align: justify
+
+  @keyframes slide-in
+    from
+      transform: translateY(150%)
+    to
+      transform: translateY(-50%)

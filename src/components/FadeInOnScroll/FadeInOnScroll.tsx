@@ -20,7 +20,9 @@ export const FadeInOnScroll: FC<FadeInOnScrollProps> = ({
   const [transform, setTransform] = useState(fromBottom ? initialTransform : undefined);
 
   const observerCallback = useCallback<IntersectionObserverCallback>(
-    ([{ isIntersecting }]) => {
+    ([{ isIntersecting, target }]) => {
+      console.log({ isIntersecting, target });
+
       if (isIntersecting) {
         setOpacity("1");
         setTransitionDelay(delay + "s");
@@ -41,7 +43,7 @@ export const FadeInOnScroll: FC<FadeInOnScrollProps> = ({
   );
 
   const observer = useMemo(
-    () => new IntersectionObserver(observerCallback, { threshold: 0 }),
+    () => new IntersectionObserver(observerCallback, { threshold: 1 }),
     [observerCallback]
   );
 
