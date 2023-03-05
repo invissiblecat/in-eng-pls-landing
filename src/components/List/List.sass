@@ -1,0 +1,47 @@
+@import '../../styles/vars.sass'
+
+.list
+  text-transform: uppercase
+  & .wrapper
+    flex-direction: column
+    gap: 30px
+  &__title
+    text-align: center
+    font-family: Georgia
+    font-size: 50px
+
+    margin-bottom: 50px
+  &__item
+    display: flex
+    justify-content: space-between
+
+    font-family: Raleway
+    font-size: 20px
+
+    &-number
+      font-size: 27px
+
+      text-align: center
+
+      border: 2px solid $dark-gray
+      width: 35px
+      height: 35px
+
+    &-value
+      padding-top: 20px
+
+.line-animation
+  &::before
+    content: ""
+    position: absolute
+    background: $dark-gray
+    height: 2px
+    animation: line-in 1.5s ease-in
+    animation-fill-mode: forwards
+
+    @keyframes line-in
+      0%
+        width: 0px
+
+      100%
+        width: 1100px

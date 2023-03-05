@@ -1,14 +1,16 @@
+
 @import '../../styles/vars.sass'
 
 .section
-  margin-top: 250px
+  margin-bottom: 200px
   & .wrapper
     justify-content: space-between
   &__img
     width: 400px
-    animation: 3s linear slide-in
+    animation: 3s linear section-img-scroll
     animation-play-state: paused
     animation-delay: calc(var(--scroll) * -2.3s)
+
   &__text
     margin-top: 50px
   &__description
@@ -21,8 +23,8 @@
     line-height: 140%
     text-align: justify
 
-  @keyframes slide-in
-    from
-      transform: translateY(150%)
-    to
-      transform: translateY(-50%)
+@keyframes section-img-scroll
+  from
+    transform: translateY(50%)
+  to
+    transform: translateY(-50%)

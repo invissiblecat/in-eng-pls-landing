@@ -22,7 +22,7 @@ const values: { title: string }[] = [
   },
 ];
 
-export const Header: React.FC<HeaderProps> = ({}) => {
+export const Header: React.FC<HeaderProps> = () => {
   return (
     <div className="header">
       <div className="wrapper__wide">

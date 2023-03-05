@@ -1,6 +1,7 @@
 import React from "react";
 import About from "../assets/icons/about.png";
 import { Header } from "../components/Header/Header";
+import { List } from "../components/List/List";
 import { Profile } from "../components/Profile/Profile";
 import { Section, SectionProps } from "../components/Section/Section";
 
@@ -22,6 +23,7 @@ export const MainPage: React.FC = () => {
         text={aboutProps.text}
         imgSrc={aboutProps.imgSrc}
       />
+      <List />
     </>
   );
 };
