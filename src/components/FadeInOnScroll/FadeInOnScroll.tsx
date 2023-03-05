@@ -56,7 +56,15 @@ export const FadeInOnScroll: FC<FadeInOnScrollProps> = ({
   }, [observer]);
 
   return (
-    <div ref={ref} style={{ transition: "all 0.5s ease", transform, opacity, transitionDelay }}>
+    <div
+      ref={ref}
+      style={{
+        transition: "all 1s ease",
+        transform,
+        opacity,
+        transitionDelay,
+      }}
+    >
       {children}
     </div>
   );

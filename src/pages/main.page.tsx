@@ -1,12 +1,12 @@
 import React from "react";
 import { Header } from "../components/Header/Header";
+import { Profile } from "../components/Profile/Profile";
 
-interface MainPageProps {}
-
-export const MainPage: React.FC<MainPageProps> = ({}) => {
+export const MainPage: React.FC = () => {
   return (
     <>
       <Header />
+      <Profile />
     </>
   );
 };
