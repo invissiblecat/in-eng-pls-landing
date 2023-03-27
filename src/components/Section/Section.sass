@@ -7,9 +7,14 @@
     justify-content: space-between
   &__img
     width: 400px
-    animation: 3s linear section-img-scroll
+    animation: 1s linear section-img-scroll
     animation-play-state: paused
-    animation-delay: calc(var(--scroll) * -2.3s)
+    animation-delay: calc(var(--scroll) * -0.8s)
+    &__reverse
+      width: 400px
+      animation: 1s linear section-img-scroll-reverse
+      animation-play-state: paused
+      animation-delay: calc(var(--scroll) * -0.8s)
 
   &__text
     margin-top: 50px
@@ -27,4 +32,10 @@
   from
     transform: translateY(50%)
   to
-    transform: translateY(-50%)
+    transform: translateY(-90%)
+
+@keyframes section-img-scroll-reverse
+  from
+    transform: translateY(-100%)
+  to
+    transform: translateY(25%)
