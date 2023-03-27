@@ -5,6 +5,7 @@ import { CollapsibleList } from "../components/CollapsibleList/CollapsibleList";
 import { Header } from "../components/Header/Header";
 import { List } from "../components/List/List";
 import { Profile } from "../components/Profile/Profile";
+import { ReviewSlider } from "../components/ReviewSlider/ReviewSlider";
 import { Section, SectionProps } from "../components/Section/Section";
 
 const aboutProps: SectionProps = {
@@ -50,6 +51,7 @@ export const MainPage: React.FC = () => {
         reverse
       />
       <CollapsibleList />
+      <ReviewSlider />
     </>
   );
 };
