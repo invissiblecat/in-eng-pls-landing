@@ -1,6 +1,7 @@
 import React from "react";
 import About from "../assets/icons/about.png";
 import Edu from "../assets/icons/edu.png";
+import { CollapsibleList } from "../components/CollapsibleList/CollapsibleList";
 import { Header } from "../components/Header/Header";
 import { List } from "../components/List/List";
 import { Profile } from "../components/Profile/Profile";
@@ -48,6 +49,7 @@ export const MainPage: React.FC = () => {
         imgSrc={educationProps.imgSrc}
         reverse
       />
+      <CollapsibleList />
     </>
   );
 };
