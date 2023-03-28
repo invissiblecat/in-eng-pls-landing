@@ -15,13 +15,13 @@
     &.open
       border-bottom: none
     &__img
-      transition: all 0.3s
+      transition: all 0.2s
       height: 40px
     & .open
       rotate: 45deg
 
   &__content
-    transition: all 0.5s ease-in
+    transition: all 0.3s ease-out
     height: auto
     display: flex
     flex-direction: column
@@ -31,7 +31,7 @@
     overflow: hidden
     &.open
       max-height: 1000px
-      transition-timing-function: ease-out
+      transition-timing-function: ease-in
     &.last
       transition: none
       border-bottom: 2px solid $dark-gray
