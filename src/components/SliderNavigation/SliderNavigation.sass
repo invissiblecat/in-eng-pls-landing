@@ -1,0 +1,15 @@
+@import '../../styles/vars.sass'
+.slider-navigation
+  display: flex
+  gap: 30px
+
+  & .arrow
+    width: 100px
+    cursor: pointer
+    &.previous
+      rotate: 180deg
+    & *
+      transition: all 0.1s
+      stroke: $gray
+    &:hover *
+      stroke: $white

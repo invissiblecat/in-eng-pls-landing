@@ -2,13 +2,19 @@
 
 .review-slider
   margin-bottom: 500px
-  width: 500px
-  height: 500px
 
-.swiper
-  width: 500px
-  height: 500px
-  overflow: visible
+  & .wrapper
+    display: flex
+    flex-direction: column
+    gap: 50px
 
-.swiper-img
-  height: 500px
+  & .slider-navigation
+    transform: translate(100%, -2250%)
+
+  & .swiper
+    width: 500px
+    height: 500px
+    overflow: visible
+
+    & .swiper-img
+      height: 500px
