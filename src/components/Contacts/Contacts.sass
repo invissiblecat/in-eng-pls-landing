@@ -1,0 +1,70 @@
+@import '../../styles/vars.sass'
+
+.contacts
+  margin-bottom: 250px
+  & .wrapper
+    display: flex
+    flex-direction: column
+    gap: 30px
+    & .sns
+      display: flex
+      flex-direction: row
+      align-items: center
+      gap: 90px
+      & .icons
+        display: flex
+        flex-direction: row
+        gap: 10px
+      &.wrapper
+        display: flex
+        flex-direction: row
+        margin: 0
+        margin-top: 50px
+        gap: 210px
+      &.phone
+        & .button
+          color: $white
+          font-family: Georgia
+          font-size: 30px
+          text-transform: uppercase
+          background-color: $black
+          border: 1px solid $white
+          padding: 15px
+          padding-right: 60px
+      & .icon
+        cursor: pointer
+        width: 50px
+        & *
+          transition: all 0.1s
+          fill: $black
+        &:hover *
+          fill: $white
+          stroke: $black
+
+    & .paragraph
+      font-family: Raleway
+      font-size: 20px
+      line-height: 30px
+      text-align: justify
+      &.big
+        font-size: 35px
+        text-transform: uppercase
+      &.wrapper
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        max-width: 1000px
+        width: 100%
+        margin-left: 0
+        &.text
+          padding-top: 20px
+          display: flex
+          flex-direction: column
+          max-width: 480px
+        & .number
+          position: relative
+          width: 100%
+          & .paragraph
+            position: absolute
+            bottom: 0
+            right: 0

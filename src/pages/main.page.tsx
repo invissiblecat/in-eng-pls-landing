@@ -2,6 +2,7 @@ import React from "react";
 import About from "../assets/icons/about.png";
 import Edu from "../assets/icons/edu.png";
 import { CollapsibleList } from "../components/CollapsibleList/CollapsibleList";
+import { Contacts } from "../components/Contacts/Contacts";
 import { Header } from "../components/Header/Header";
 import { Info } from "../components/Info/Info";
 import { List } from "../components/List/List";
@@ -54,6 +55,7 @@ export const MainPage: React.FC = () => {
       <CollapsibleList />
       <ReviewSlider />
       <Info />
+      <Contacts />
     </>
   );
 };
