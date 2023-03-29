@@ -6,6 +6,7 @@ interface FadeInOnScrollProps extends PropsWithChildren {
   delay?: number;
   repeatable?: boolean;
   fromBottom?: boolean;
+  className?: string;
 }
 
 export const FadeInOnScroll: FC<FadeInOnScrollProps> = ({
@@ -13,6 +14,7 @@ export const FadeInOnScroll: FC<FadeInOnScrollProps> = ({
   repeatable,
   fromBottom,
   children,
+  className,
 }) => {
   const ref = useRef<HTMLDivElement>(null);
   const [opacity, setOpacity] = useState(initialOpacity);
@@ -57,12 +59,14 @@ export const FadeInOnScroll: FC<FadeInOnScrollProps> = ({
 
   return (
     <div
+      className={className}
       ref={ref}
       style={{
         transition: "all 1s ease",
         transform,
         opacity,
         transitionDelay,
+        // display: "none",
       }}
     >
       {children}

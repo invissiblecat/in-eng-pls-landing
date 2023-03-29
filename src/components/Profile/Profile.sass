@@ -2,7 +2,6 @@
 
 .profile
   padding-top: 30px
-  // margin-bottom: 200px
   & .wrapper
     flex-direction: column
     align-items: center
@@ -23,17 +22,22 @@
     animation: 3s linear profile-img-scroll
     animation-play-state: paused
     animation-delay: calc(var(--scroll) * -2.3s)
+    &__wrapper
+      height: 850px
   &__badge
     position: absolute
-    left: 1110px
+    left: 1178px
     top: 450px
+    height: 0
     &__flag
-      transform: translate(200px, -100px)
-      width: 100px
-    &__title
-      width: 300px
 
-      animation: rotate 0.5s linear infinite
+      transform: translate(180%, -75%)
+      width: 80px
+    &__title
+
+      width: 200px
+
+      animation: rotate 2s linear infinite
       animation-play-state: paused
       animation-delay: calc(var(--scroll) * -3s)
 

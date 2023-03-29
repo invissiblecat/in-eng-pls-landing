@@ -10,14 +10,14 @@ export const Profile: React.FC = () => {
   return (
     <div className="profile" id="profile">
       <div className="wrapper">
-        <FadeInOnScroll>
-          <h1 className="profile__title">sherenkova alina</h1>
+        <FadeInOnScroll className="profile__title">
+          <h1>sherenkova alina</h1>
         </FadeInOnScroll>
-        <FadeInOnScroll delay={1}>
+        <FadeInOnScroll delay={1} className="profile__img__wrapper">
           <img className="profile__img" src={ProfilePic} alt="sherenkova alina" />
         </FadeInOnScroll>
-        <div className="profile__badge">
-          <FadeInOnScroll delay={1.5}>
+        <div>
+          <FadeInOnScroll delay={1.5} className="profile__badge">
             <img className="profile__badge__flag" src={Flag} alt="flag"></img>
             <img
               className="profile__badge__title"

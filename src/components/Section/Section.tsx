@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React, { CSSProperties, ReactNode } from "react";
 import { FadeInOnScroll } from "../FadeInOnScroll/FadeInOnScroll";
 import { SectionTitle } from "../SectionTitle/SectionTitle";
 import "./Section.sass";
@@ -12,6 +12,7 @@ export interface SectionProps {
   reverse?: boolean;
   titleDelay?: number;
   descDelay?: number;
+  style?: CSSProperties;
 }
 
 export const Section: React.FC<SectionProps> = ({
@@ -23,10 +24,11 @@ export const Section: React.FC<SectionProps> = ({
   to,
   titleDelay = 0,
   descDelay = 0.5,
+  style,
 }) => {
   return (
     <section className="section" id={to}>
-      <div className="wrapper" style={{ flexDirection: reverse ? "row-reverse" : "row" }}>
+      <div className="wrapper" style={{ ...style, flexDirection: reverse ? "row-reverse" : "row" }}>
         <div className="section__text">
           <FadeInOnScroll delay={titleDelay}>
             <SectionTitle title={title} translation={translation} />
