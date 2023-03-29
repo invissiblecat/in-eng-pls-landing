@@ -1,5 +1,6 @@
 @import './vars.sass'
 @import 'reset-css'
+@import 'mixins.sass'
 
 html
   scroll-behavior: smooth
@@ -11,6 +12,15 @@ body
   display: flex
   max-width: 1100px
   margin: 0 auto
+
+  @include xl-down
+    max-width: 900px
+  @include lg-down
+    max-width: 700px
+  @include md-down
+    max-width: unset
+    padding: 0 20px
+
   &__wide
     display: flex
     margin: 0 auto

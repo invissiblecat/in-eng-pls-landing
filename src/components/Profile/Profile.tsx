@@ -13,10 +13,8 @@ export const Profile: React.FC = () => {
         <FadeInOnScroll className="profile__title">
           <h1>sherenkova alina</h1>
         </FadeInOnScroll>
-        <FadeInOnScroll delay={1} className="profile__img__wrapper">
+        <FadeInOnScroll delay={1} className="profile__img-wrapper">
           <img className="profile__img" src={ProfilePic} alt="sherenkova alina" />
-        </FadeInOnScroll>
-        <div>
           <FadeInOnScroll delay={1.5} className="profile__badge">
             <img className="profile__badge__flag" src={Flag} alt="flag"></img>
             <img
@@ -25,7 +23,7 @@ export const Profile: React.FC = () => {
               alt="учить английский это просто"
             />
           </FadeInOnScroll>
-        </div>
+        </FadeInOnScroll>
       </div>
     </div>
   );

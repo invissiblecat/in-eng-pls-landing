@@ -1,0 +1,29 @@
+$breakpoint-xs: 360px
+$breakpoint-sm: 480px
+$breakpoint-md: 600px
+$breakpoint-lg: 900px
+$breakpoint-xl: 1200px
+
+@mixin breakpoint-down($bp)
+  @media (max-width: $bp)
+    @content
+
+@mixin xl-down()
+  @include breakpoint-down($breakpoint-xl)
+    @content
+
+@mixin lg-down()
+  @include breakpoint-down($breakpoint-lg)
+    @content
+
+@mixin md-down()
+  @include breakpoint-down($breakpoint-md)
+    @content
+
+@mixin sm-down()
+  @include breakpoint-down($breakpoint-sm)
+    @content
+
+@mixin xs-down()
+  @include breakpoint-down($breakpoint-xs)
+    @content

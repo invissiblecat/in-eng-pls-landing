@@ -1,4 +1,5 @@
 @import '../../styles/vars.sass'
+@import '../../styles/mixins.sass'
 
 .profile
   padding-top: 30px
@@ -18,24 +19,34 @@
     z-index: 1
   &__img
     width: 800px
-    height: 937.11px
     animation: 3s linear profile-img-scroll
     animation-play-state: paused
     animation-delay: calc(var(--scroll) * -2.3s)
-    &__wrapper
+    @include lg-down
+    width: 600px
+
+    &-wrapper
+      position: relative
       height: 850px
   &__badge
     position: absolute
-    left: 1178px
-    top: 450px
-    height: 0
+    right: -100px
+    top: 130px
+    width: 200px
+    height: 200px
+    display: flex
+    align-items: center
+    justify-content: center
     &__flag
-
-      transform: translate(180%, -75%)
       width: 80px
+
     &__title
+      position: absolute
+      left: 0
+      top: 0
 
       width: 200px
+      height: 200px
 
       animation: rotate 2s linear infinite
       animation-play-state: paused

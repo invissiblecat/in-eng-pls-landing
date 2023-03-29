@@ -1,6 +1,5 @@
 import "./Contacts.sass";
 
-import clsx from "clsx";
 import React from "react";
 import { SectionTitle } from "../SectionTitle/SectionTitle";
 
@@ -13,32 +12,30 @@ export const Contacts: React.FC = () => {
     <div className="contacts" id="contacts">
       <div className="wrapper">
         <SectionTitle title="contacts" translation="связаться со мной" />
-        <div className={clsx("paragraph", "wrapper")}>
-          <div className={clsx("paragraph", "wrapper", "text")}>
-            <p className="paragraph">
-              Что-ж, спасибо тебе за изучение информации о моём подходе к обучению. Буду рада
-              пообщаться с тобой, и, конечно же, на Английском языке! Помни, что первый урок для
-              тебя будет БЕСПЛАТНЫМ.
-            </p>
-            <p className="paragraph">До встречи, дорогой друг!</p>
-          </div>
-          <div className="number">
-            <p className={clsx("paragraph", "big")}>8 (910) 847-23-73</p>
-          </div>
-        </div>
-        <div className={clsx("sns", "wrapper")}>
-          <div className="sns">
-            <p className={clsx("paragraph", "big")}>мои соцсети</p>
-            <div className="icons">
-              <Telegram className={clsx("sns", "icon")} />
-              <Instagram className={clsx("sns", "icon")} />
-              <VK className={clsx("sns", "icon")} />
+        <div className="contacts__wrapper">
+          <div>
+            <div className="paragraph__wrapper">
+              <p className="paragraph">
+                Что-ж, спасибо тебе за изучение информации о моём подходе к обучению. Буду рада
+                пообщаться с тобой, и, конечно же, на Английском языке! Помни, что первый урок для
+                тебя будет БЕСПЛАТНЫМ.
+              </p>
+              <p className="paragraph">До встречи, дорогой друг!</p>
+            </div>
+            <div className="sns">
+              <p className="paragraph__big">мои соцсети</p>
+              <div className="sns__icon-list">
+                <Telegram className="sns__icon" />
+                <Instagram className="sns__icon" />
+                <VK className="sns__icon" />
+              </div>
             </div>
           </div>
-          <div className={clsx("sns", "phone")}>
+          <div className="sns__phone">
+            <p className="paragraph__big">8 (910) 847-23-73</p>
             <a href="tel:8-910-847-23-73">
-              <button className={clsx("phone", "button")}>
-                <span className="text">позвонить</span>
+              <button className="sns__phone-button">
+                <span>позвонить</span>
               </button>
             </a>
           </div>

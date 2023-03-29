@@ -1,97 +1,94 @@
 @import '../../styles/vars.sass'
+@import '../../styles/mixins.sass'
 
 .contacts
+  font-family: Raleway
   padding-top: 40px
   margin-bottom: 100px
-  & .wrapper
+
+  &__wrapper
     display: flex
+    justify-content: space-between
+    width: 100%
+    @include lg-down
+      flex-direction: column
+      gap: 30px
+  & > .wrapper
     flex-direction: column
     gap: 30px
-    & .sns
-      display: flex
-      flex-direction: row
-      align-items: center
-      justify-content: space-between
-      gap: 90px
-      & .icons
+  & .sns
+    display: flex
+    align-items: center
+    justify-content: space-between
+    gap: 90px
+
+    &__icon
+      cursor: pointer
+      width: 50px
+      &-list
         display: flex
-        flex-direction: row
         gap: 10px
-      &.wrapper
-        display: flex
-        flex-direction: row
-        margin: 0
-        margin-top: 50px
-        gap: 210px
-      &.phone
-        & .button
-          cursor: pointer
-          color: $white
-          font-family: Georgia
-          font-size: 30px
-          text-transform: uppercase
-          background-color: $black
-          border: 1px solid $white
-          padding: 15px
-          padding-right: 60px
-          margin-bottom: 30px
-          position: relative
-          &:hover
-            color: $black
-          &::before
-            content: ""
-            position: absolute
-            top: 0
-            left: 0
-            pointer-events: none
-            background-color: $black
-            height: 100%
-            width: 0
-            transition: all 1s
+      & *
+        transition: all 0.5s
+        fill: $black
+      &:hover *
+        fill: $white
+        stroke: $black
 
-          &:hover
-            &::before
-              background-color: $white
-              width: 100%
-          & .text
-            position: relative
-            z-index: 1
-
-      & .icon
-        cursor: pointer
-        width: 50px
-        & *
-          transition: all 0.5s
-          fill: $black
-        &:hover *
-          fill: $white
-          stroke: $black
-
-    & .paragraph
-      font-family: Raleway
-      font-size: 20px
-      line-height: 30px
-      text-align: justify
-      &.big
-        font-size: 35px
-        text-transform: uppercase
-      &.wrapper
-        display: flex
+    &__phone
+      display: flex
+      justify-content: end
+      flex-direction: column
+      gap: 50px
+      @include lg-down
         flex-direction: row
         justify-content: space-between
-        // max-width: 1000px
-        width: 100%
-        margin-left: 0
-        &.text
-          padding-top: 20px
-          display: flex
-          flex-direction: column
-          max-width: 500px
-        & .number
+        align-items: center
+      &-button
+        cursor: pointer
+        color: $white
+        font-family: Georgia
+        font-size: 30px
+        text-transform: uppercase
+        background-color: $black
+        border: 1px solid $white
+        padding: 15px
+        padding-right: 60px
+        position: relative
+        & > span
           position: relative
-          width: 100%
-          & .paragraph
-            position: absolute
-            bottom: 0
-            right: 0
-            left: 1
+          z-index: 1
+        &::before
+          content: ""
+          position: absolute
+          top: 0
+          left: 0
+          pointer-events: none
+          background-color: $black
+          height: 100%
+          width: 0
+          transition: all 1s
+
+        &:hover
+          color: $black
+          &::before
+            background-color: $white
+            width: 100%
+
+  & .paragraph
+    font-size: 20px
+    line-height: 30px
+    text-align: justify
+    max-width: 500px
+
+    &__wrapper
+      margin-bottom: 67px
+
+    &:not(:last-child)
+      margin-bottom: 20px
+
+    &__big
+      font-size: 35px
+      text-transform: uppercase
+      display: flex
+      align-items: end
