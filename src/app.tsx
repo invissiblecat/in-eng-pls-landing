@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { BrowserRouter } from "react-router-dom";
 import { useScrollValue } from "./hooks/scroll-hooks";
 import { MainPage } from "./pages/main.page";
@@ -8,7 +8,9 @@ export const App: React.FC = () => {
   return (
     <React.StrictMode>
       <BrowserRouter>
-        <MainPage />
+        <Suspense fallback="loading">
+          <MainPage />
+        </Suspense>
       </BrowserRouter>
     </React.StrictMode>
   );

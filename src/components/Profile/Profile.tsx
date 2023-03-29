@@ -16,16 +16,16 @@ export const Profile: React.FC = () => {
         <FadeInOnScroll delay={1}>
           <img className="profile__img" src={ProfilePic} alt="sherenkova alina" />
         </FadeInOnScroll>
-        <FadeInOnScroll delay={2}>
-          <div className="profile__badge">
+        <div className="profile__badge">
+          <FadeInOnScroll delay={1.5}>
             <img className="profile__badge__flag" src={Flag} alt="flag"></img>
             <img
               className="profile__badge__title"
               src={LearnIsEasy}
               alt="учить английский это просто"
-            ></img>
-          </div>
-        </FadeInOnScroll>
+            />
+          </FadeInOnScroll>
+        </div>
       </div>
     </div>
   );
