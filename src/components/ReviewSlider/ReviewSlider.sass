@@ -3,6 +3,7 @@
 .review-slider
   padding-top: 130px
   margin-bottom: 300px
+  overflow: hidden
 
   & .wrapper
     display: flex
@@ -10,12 +11,12 @@
     & .slider-wrapper
       display: flex
       flex-direction: column
+      overflow: hidden
       gap: 60px
-      overflow-y: hidden
       width: 150%
 
   & .slider-navigation
-    transform: translate(150%, -2490%)
+    transform: translate(159%, -2490%)
 
   & .swiper
     margin-left: 0px
@@ -25,3 +26,5 @@
 
     & .swiper-img
       height: 560px
+    & .swiper-scrollbar
+      display: none

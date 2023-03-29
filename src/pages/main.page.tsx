@@ -47,6 +47,8 @@ export const MainPage: React.FC = () => {
         text={aboutProps.text}
         imgSrc={aboutProps.imgSrc}
         to={aboutProps.to}
+        titleDelay={4}
+        descDelay={5}
       />
       <List />
       <Section

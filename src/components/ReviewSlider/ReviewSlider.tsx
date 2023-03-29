@@ -16,11 +16,7 @@ export const ReviewSlider: React.FC = () => {
       <div className="wrapper">
         <div className="slider-wrapper">
           <SectionTitle title="reviews" translation="отзывы" />
-          <Swiper
-            spaceBetween={700}
-            slidesPerView={1}
-            onSlideChange={() => console.log("slide change")}
-          >
+          <Swiper spaceBetween={750} slidesPerView={1} scrollbar={{ hide: true, enabled: false }}>
             <SliderNavigation />
             <SwiperSlide>
               <img className="swiper-img" src={Otziv1} alt="review" />

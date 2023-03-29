@@ -41,7 +41,7 @@ export const FadeInOnScroll: FC<FadeInOnScrollProps> = ({
   );
 
   const observer = useMemo(
-    () => new IntersectionObserver(observerCallback, { threshold: 1 }),
+    () => new IntersectionObserver(observerCallback, { threshold: 0 }),
     [observerCallback]
   );
 
