@@ -12,7 +12,7 @@ import "./ReviewSlider.sass";
 
 export const ReviewSlider: React.FC = () => {
   return (
-    <div className="review-slider">
+    <div className="review-slider" id="reviews">
       <div className="wrapper">
         <div className="slider-wrapper">
           <SectionTitle title="reviews" translation="отзывы" />

@@ -8,6 +8,7 @@ export interface SectionProps {
   translation: string;
   imgSrc: string;
   text: ReactNode;
+  to: string;
   reverse?: boolean;
   imgStyle?: CSSProperties;
 }
@@ -19,9 +20,10 @@ export const Section: React.FC<SectionProps> = ({
   imgSrc,
   reverse,
   imgStyle,
+  to,
 }) => {
   return (
-    <section className="section">
+    <section className="section" id={to}>
       <div className="wrapper" style={{ flexDirection: reverse ? "row-reverse" : "row" }}>
         <div className="section__text">
           <FadeInOnScroll>

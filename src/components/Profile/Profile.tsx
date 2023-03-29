@@ -8,7 +8,7 @@ import "./Profile.sass";
 
 export const Profile: React.FC = () => {
   return (
-    <div className="profile">
+    <div className="profile" id="profile">
       <div className="wrapper">
         <FadeInOnScroll>
           <h1 className="profile__title">sherenkova alina</h1>

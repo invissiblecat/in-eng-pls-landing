@@ -10,7 +10,7 @@ import { ReactComponent as VK } from "../../assets/icons/vk.svg";
 
 export const Contacts: React.FC = () => {
   return (
-    <div className="contacts">
+    <div className="contacts" id="contacts">
       <div className="wrapper">
         <SectionTitle title="contacts" translation="связаться со мной" />
         <div className={clsx("paragraph", "wrapper")}>

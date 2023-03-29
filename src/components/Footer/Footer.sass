@@ -1,11 +1,12 @@
 @import '../../styles/vars.sass'
-.header
+.footer
   font-family: Raleway
   font-size: 20px
   color: $gray
   text-transform: uppercase
 
   padding: 30px 0
+  background-color: $darkest-gray
 
   &__logo
     width: 270px
@@ -13,8 +14,12 @@
   &__nav
     display: flex
     gap: 30px
-    &-item
-      color: $gray
-      text-decoration: none
-      &:hover
-        color: $white
+
+  &__up
+    color: $white
+    display: flex
+    align-items: center
+    gap: 10px
+    text-decoration: none
+    &-img
+      width: 15px

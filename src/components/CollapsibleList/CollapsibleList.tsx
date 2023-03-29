@@ -9,7 +9,7 @@ interface CollapsibleListProps {}
 
 export const CollapsibleList: React.FC<CollapsibleListProps> = ({}) => {
   return (
-    <div className="collapsible-list">
+    <div className="collapsible-list" id="services">
       <div className="wrapper">
         <SectionTitle title="services" translation="услуги" />
         <div className="collapsible-list-items">
