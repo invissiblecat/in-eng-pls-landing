@@ -36,7 +36,9 @@ export const Contacts: React.FC = () => {
             </div>
           </div>
           <div className={clsx("sns", "phone")}>
-            <button className={clsx("phone", "button")}>позвонить</button>
+            <a href="tel:8-910-847-23-73">
+              <button className={clsx("phone", "button")}>позвонить</button>
+            </a>
           </div>
         </div>
       </div>
