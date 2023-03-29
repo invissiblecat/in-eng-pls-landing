@@ -16,7 +16,7 @@ export const Contacts: React.FC = () => {
         <div className={clsx("paragraph", "wrapper")}>
           <div className={clsx("paragraph", "wrapper", "text")}>
             <p className="paragraph">
-              Что-ж, спасибо тебе, что изучил информацию о моём подходе к обучению. Буду рада
+              Что-ж, спасибо тебе за изучение информации о моём подходе к обучению. Буду рада
               пообщаться с тобой, и, конечно же, на Английском языке! Помни, что первый урок для
               тебя будет БЕСПЛАТНЫМ.
             </p>
@@ -37,7 +37,9 @@ export const Contacts: React.FC = () => {
           </div>
           <div className={clsx("sns", "phone")}>
             <a href="tel:8-910-847-23-73">
-              <button className={clsx("phone", "button")}>позвонить</button>
+              <button className={clsx("phone", "button")}>
+                <span className="text">позвонить</span>
+              </button>
             </a>
           </div>
         </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import { NavHashLink } from "react-router-hash-link";
+import { HashLink } from "react-router-hash-link";
 import Logo from "../../assets/icons/logo.svg";
 import "./Header.sass";
 
@@ -37,9 +37,9 @@ export const Header: React.FC<HeaderProps> = () => {
         </a>
         <div className="header__nav">
           {values.map(({ title, to }, i) => (
-            <NavHashLink to={`/#${to}`} className="header__nav-item" key={i}>
+            <HashLink to={`/#${to}`} className="header__nav-item" key={i}>
               {title}
-            </NavHashLink>
+            </HashLink>
           ))}
         </div>
       </div>

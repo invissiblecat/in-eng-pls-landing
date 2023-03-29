@@ -31,7 +31,12 @@ export const ReviewSlider: React.FC = () => {
             <SwiperSlide>
               <img className="swiper-img" src={Otziv1} alt="review" />
             </SwiperSlide>
-            <SwiperSlide>slide 4</SwiperSlide>
+            <SwiperSlide>
+              <img className="swiper-img" src={Otziv1} alt="review" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img className="swiper-img" src={Otziv1} alt="review" />
+            </SwiperSlide>
           </Swiper>
         </div>
       </div>
