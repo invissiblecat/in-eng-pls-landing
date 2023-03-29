@@ -28,8 +28,10 @@ export const Header: React.FC<HeaderProps> = () => {
       <div className="wrapper__wide">
         <img src={Logo} className="header__logo" alt="IN ENGLISH PLS" />
         <div className="header__nav">
-          {values.map(({ title }) => (
-            <nav className="header__nav-item">{title}</nav>
+          {values.map(({ title }, i) => (
+            <nav className="header__nav-item" key={i}>
+              {title}
+            </nav>
           ))}
         </div>
       </div>

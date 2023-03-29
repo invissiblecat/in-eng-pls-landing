@@ -14,12 +14,12 @@ export const List: React.FC = () => {
 
   const ref = useRef<HTMLDivElement>(null);
   const observerCallback = useCallback<IntersectionObserverCallback>(
-    ([{ isIntersecting, target }]) => {
+    ([{ isIntersecting }]) => {
       if (!triggered && isIntersecting) {
         setTriggered(true);
       }
     },
-    []
+    [triggered]
   );
 
   const observer = useMemo(
@@ -44,7 +44,7 @@ export const List: React.FC = () => {
           за 8 лет я помогла своим ученикам
         </h4>
         {values.map((value, i) => (
-          <div className={triggered ? "list__item line-animation" : "list__item"}>
+          <div className={triggered ? "list__item line-animation" : "list__item"} key={i}>
             <div className="list__item-number">{i + 1}</div>
             <div className="list__item-value">{value}</div>
           </div>

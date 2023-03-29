@@ -1,9 +1,6 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import About from "../../assets/icons/about.png";
-import Edu from "../../assets/icons/edu.png";
-
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/scrollbar";
@@ -23,14 +20,10 @@ export const ReviewSlider: React.FC = () => {
           onSlideChange={() => console.log("slide change")}
         >
           <SliderNavigation />
-          <SwiperSlide>
-            <img className="swiper-img" src={About} alt="alt" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img className="swiper-img" src={Edu} alt="alt" />
-          </SwiperSlide>
-          <SwiperSlide>Slide 3</SwiperSlide>
-          <SwiperSlide>Slide 4</SwiperSlide>
+          <SwiperSlide>slide 1</SwiperSlide>
+          <SwiperSlide>slide 2</SwiperSlide>
+          <SwiperSlide>slide 3</SwiperSlide>
+          <SwiperSlide>slide 4</SwiperSlide>
         </Swiper>
       </div>
     </div>
