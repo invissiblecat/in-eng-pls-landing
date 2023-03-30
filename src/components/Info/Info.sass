@@ -1,7 +1,10 @@
 @import '../../styles/vars.sass'
+@import '../../styles/mixins.sass'
 
 .info
   margin-bottom: 170px
+  @include lg-down
+    margin-bottom: 70px
   & .wrapper
     transition: all 0.3s
 
@@ -17,6 +20,9 @@
     &.big
       font-family: Masvol
       font-size: 50px
+      @include lg-down
+        font-size: 40px
+
     &.small
       display: flex
       gap: 5px

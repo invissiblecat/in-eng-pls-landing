@@ -34,7 +34,9 @@ export const Section: React.FC<SectionProps> = ({
             <SectionTitle title={title} translation={translation} />
           </FadeInOnScroll>
           <FadeInOnScroll delay={descDelay}>
-            <p className="section__description">{text}</p>
+            <p className={reverse ? "section__description__reverse" : "section__description"}>
+              {text}
+            </p>
           </FadeInOnScroll>
         </div>
         <img

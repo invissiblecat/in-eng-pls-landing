@@ -1,9 +1,12 @@
 @import '../../styles/vars.sass'
+@import '../../styles/mixins.sass'
 
 .review-slider
   padding-top: 210px
   margin-bottom: 280px
   overflow: hidden
+  @include lg-down
+    margin-bottom: 170px
 
   & .wrapper
     display: flex

@@ -17,17 +17,31 @@
 
     position: relative
     z-index: 1
+
+    @include xl-down
+      font-size: 90px
+
+    @include lg-down
+      font-size: 70px
+    @include md-down
+      font-size: 50px
+
   &__img
     width: 800px
     animation: 3s linear profile-img-scroll
     animation-play-state: paused
     animation-delay: calc(var(--scroll) * -2.3s)
     @include lg-down
-    width: 600px
+      width: 600px
+    @include md-down
+      width: 450px
 
     &-wrapper
       position: relative
       height: 850px
+      @include lg-down
+        height: 650px
+
   &__badge
     position: absolute
     right: -100px

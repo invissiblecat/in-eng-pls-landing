@@ -1,4 +1,5 @@
 @import '../../styles/vars.sass'
+@import '../../styles/mixins.sass'
 
 .section-title
   text-transform: uppercase
@@ -7,6 +8,9 @@
     font-size: 100px
     color: $white
     padding-bottom: 5px
+    @include lg-down
+      font-size: 85px
+
   &__translation
     font-family: Raleway
     font-size: 30px

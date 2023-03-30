@@ -1,8 +1,12 @@
 
 @import '../../styles/vars.sass'
+@import '../../styles/mixins.sass'
 
 .section
   margin-bottom: 170px
+  @include lg-down
+    margin-bottom: 190px
+
   & .wrapper
     justify-content: space-between
   &__img
@@ -10,23 +14,51 @@
     animation: 1s linear section-img-scroll
     animation-play-state: paused
     animation-delay: calc(var(--scroll) * -0.8s)
+    @include lg-down
+      width: 300px
+      height: 400px
+      animation: 1s linear section-img-scroll-lg
+      animation-play-state: paused
+      animation-delay: calc(var(--scroll) * -0.8s)
+
     &__reverse
       width: 400px
       animation: 1s linear section-img-scroll-reverse
       animation-play-state: paused
       animation-delay: calc(var(--scroll) * -0.8s)
+      @include lg-down
+        width: 300px
+        height: 400px
+        animation: 1s linear section-img-scroll-reverse-lg
+        animation-play-state: paused
+        animation-delay: calc(var(--scroll) * -0.8s)
+        margin-right: 20px
 
   &__text
     margin-top: 50px
   &__description
-    padding-top: 60px
+    padding-top: 12%
     max-width: 490px
 
-    color: $white
     font-family: Raleway
     font-size: 20px
     line-height: 140%
     text-align: justify
+    @include lg-down
+      max-width: 340px
+      padding-top: 5%
+      font-size: 16px
+    &__reverse
+      padding-top: 12%
+      max-width: 463px
+      font-family: Raleway
+      font-size: 20px
+      line-height: 140%
+      text-align: justify
+      @include lg-down
+        padding-top: 5%
+        font-size: 16px
+        max-width: 371px
 
 @keyframes section-img-scroll
   from
@@ -34,8 +66,20 @@
   to
     transform: translateY(-530%)
 
+@keyframes section-img-scroll-lg
+  from
+    transform: translateY(70%)
+  to
+    transform: translateY(-500%)
+
 @keyframes section-img-scroll-reverse
   from
     transform: translateY(200%)
   to
     transform: translateY(-390%)
+
+@keyframes section-img-scroll-reverse-lg
+  from
+    transform: translateY(215%)
+  to
+    transform: translateY(-490%)

@@ -62,7 +62,7 @@ export const FadeInOnScroll: FC<FadeInOnScrollProps> = ({
       className={className}
       ref={ref}
       style={{
-        transition: "all 1s ease",
+        transition: "opacity 1s ease, transform 1s ease",
         transform,
         opacity,
         transitionDelay,
