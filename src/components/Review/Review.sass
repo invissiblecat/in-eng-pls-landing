@@ -17,8 +17,11 @@
 
   min-height: 60%
   &-text
-    // text-align: justify
     max-width: 75%
+    text-align: justify
+    padding-right: 37px
+    @include lg-down
+      font-size: 15px
   &:before
     content: ''
     position: absolute
@@ -27,6 +30,10 @@
     bottom: -17%
     left: 10%
     background-color: $review-gray
+    @include lg-down
+      bottom: -11%
+      left: 10%
+
   &:after
     content: ''
     position: absolute
@@ -36,6 +43,10 @@
     left: 12.7%
     rotate: 34deg
     background-color: $review-gray
+    @include lg-down
+      bottom: -8.1%
+      left: 14%
+      rotate: 34deg
 
 .reviewer-info
   display: flex

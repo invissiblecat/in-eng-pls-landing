@@ -6,7 +6,11 @@
   margin-bottom: 180px
   overflow: hidden
   @include lg-down
+    padding-top: 50px
     margin-bottom: 170px
+
+  & .section-title
+    margin-bottom: 10px
 
   & .wrapper
     display: flex
@@ -20,14 +24,19 @@
 
   & .slider-navigation
     transform: translate(80%, -2590%)
+    @include lg-down
+      transform: translate(35%, -2800%)
+      margin: 20px 0
 
   & .swiper
     margin-left: 0px
     width: 66.65%
-    height: 560px
+    height: 100%
     overflow: visible
+    @include lg-down
+      height: 700px
+    & .swiper-slide
+      margin-top: 30px
 
-    & .swiper-img
-      height: 560px
     & .swiper-scrollbar
       display: none
