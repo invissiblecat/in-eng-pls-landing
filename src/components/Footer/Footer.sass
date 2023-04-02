@@ -5,28 +5,52 @@
   font-size: 18px
   color: $gray
   text-transform: uppercase
-
-  padding: 30px 20px
   background-color: $darkest-gray
-  & .wrapper__wide
-    @include xl-down
-      padding: 0 20px
 
-  &__logo
+  & .wrapper__wide
+    padding: 30px 20px
+    @include xs-down
+    padding: 20px 10px
+    align-items: center
+
+  & .header__logo
     width: 270px
+    @include xl-down
+      padding-left: 50px
+      padding-right: 50px
+    @include lg-down
+      padding-left: 30px
+      padding-right: 30px
+    @include md-down
+      padding-left: 20px
+      padding-right: 20px
+    @include sm-down
+      width: 190px
+      padding-right: 0px
+    @include xs-down
+      width: 150px
 
   &__nav
     transition: all 0.3s
     display: flex
     gap: 30px
+    @include xl-down
+      display: none
 
   &__up
     color: $white
+    background-color: $darkest-gray
     display: flex
     align-items: center
     gap: 10px
     text-decoration: none
-    @include xl-down
-    padding-right: 15px
+    @include sm-down
+      font-size: 15px
+      padding-right: 20px
+    @include xs-down
+      font-size: 13px
+
     &-img
       width: 15px
+      @include xs-down
+      width: 12px

@@ -4,7 +4,13 @@
 .info
   margin-bottom: 150px
   @include lg-down
-    margin-bottom: 120px
+    margin-bottom: 145px
+  @include md-down
+    padding: 20px
+  @include sm-down
+    padding: 0
+    margin-bottom: 90px
+
   & .wrapper
     transition: all 0.3s
 
@@ -22,12 +28,19 @@
       font-size: 50px
       @include lg-down
         font-size: 40px
+      @include sm-down
+        font-size: 25px
 
     &.small
       display: flex
       gap: 5px
       font-family: Raleway
       font-size: 25px
+      @include sm-down
+        font-size: 20px
+      @include xs-down
+        font-size: 17px
+
       & .english
         color: $gray
 

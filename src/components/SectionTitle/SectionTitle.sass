@@ -3,6 +3,7 @@
 
 .section-title
   text-transform: uppercase
+  // padding-left: 20px
   &__title
     font-family: Masvol
     font-size: 100px
@@ -10,9 +11,19 @@
     padding-bottom: 5px
     @include lg-down
       font-size: 85px
+    @include md-down
+      font-size: 59px
+    @include sm-down
+      font-size: 50px
+    @include xs-down
+      font-size: 45px
 
   &__translation
     font-family: Raleway
     font-size: 30px
     color: $dark-gray
     transform: translateY(-30%)
+    @include md-down
+      font-size: 25px
+    @include sm-down
+      font-size: 20px

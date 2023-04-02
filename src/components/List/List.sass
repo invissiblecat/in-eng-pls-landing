@@ -4,8 +4,10 @@
 .list
   text-transform: uppercase
   margin-bottom: 230px
+  @include xl-down
+    margin-bottom: 300px
   @include lg-down
-    margin-bottom: 190px
+    margin-bottom: 170px
 
   & .wrapper
     flex-direction: column
@@ -16,9 +18,15 @@
     font-size: 50px
 
     margin-bottom: 50px
+    @include xl-down
+      font-size: 40px
     @include lg-down
       font-size: 33px
       margin-bottom: 30px
+    @include md-down
+      font-size: 30px
+    @include sm-down
+      font-size: 25px
 
   &__item
     display: flex
@@ -27,6 +35,17 @@
 
     font-family: Raleway
     font-size: 20px
+
+    @include md-down
+      font-size: 18px
+      text-align: right
+      line-height: 25px
+    @include sm-down
+      text-align: right
+      line-height: 25px
+      padding-right: 35px
+    @include xs-down
+      font-size: 13px
 
     &-number
       font-size: 27px
@@ -39,6 +58,8 @@
 
     &-value
       padding-top: 20px
+      @include xs-down
+        padding-top: 10px
 
 .line-animation
   &::before

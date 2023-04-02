@@ -4,12 +4,19 @@
 
 html
   scroll-behavior: smooth
+  @include lg-down
+    width: 120%
+  @include md-down
+    width: 100%
 body
+  width: 100%
+
   background-color: $black
   color: $white
 
 .wrapper
   display: flex
+  justify-content: left
   max-width: 1100px
   margin: 0 auto
 
@@ -20,11 +27,28 @@ body
   @include md-down
     max-width: unset
     padding: 0 20px
+  @include sm-down
+    // width: 100%
 
   &__wide
     display: flex
     margin: 0 auto
     max-width: 1600px
-    width: 100%
-    justify-content: space-between
+    // width: 100%
     align-items: center
+    justify-content: space-between
+    @include xl-down
+      max-width: 1300px
+      // min-width: 1000px
+    @include lg-down
+      max-width: 1000px
+      // min-width: 700px
+    @include md-down
+      max-width: 600px
+      // min-width: 590px
+    @include sm-down
+      max-width: 590px
+      // min-width: 360px
+    @include xs-down
+      max-width: 360px
+      // min-width: 200px

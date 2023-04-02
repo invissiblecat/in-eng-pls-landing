@@ -30,7 +30,7 @@ export const Section: React.FC<SectionProps> = ({
     <section className="section" id={to}>
       <div className="wrapper" style={{ ...style, flexDirection: reverse ? "row-reverse" : "row" }}>
         <div className="section__text">
-          <FadeInOnScroll delay={titleDelay}>
+          <FadeInOnScroll delay={titleDelay} className="section__title">
             <SectionTitle title={title} translation={translation} />
           </FadeInOnScroll>
           <FadeInOnScroll delay={descDelay}>
@@ -43,7 +43,6 @@ export const Section: React.FC<SectionProps> = ({
           className={reverse ? "section__img__reverse" : "section__img"}
           src={imgSrc}
           alt={title}
-          style={{ transform: "translateY(50%)" }}
         />
       </div>
     </section>

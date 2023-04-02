@@ -3,9 +3,16 @@
 .collapsible-list
   padding-top: 30px
   margin-bottom: 135px
+  @include xl-down
+    margin-bottom: 250px
   @include lg-down
-    padding-top: 10px
-    margin-bottom: 110px
+    padding-top: 5px
+    margin-bottom: 160px
+  @include md-down
+    padding-left: 40px
+  @include sm-down
+    margin-bottom: 100px
+    padding-left: 10px
 
   & .wrapper
     flex-direction: column

@@ -1,4 +1,5 @@
 @import '../../styles/vars.sass'
+@import '../../styles/mixins.sass'
 
 .service-section
   font-size: 18px
@@ -8,11 +9,20 @@
   gap: 50px
 
   padding: 20px 0 30px 50px
+
+  @include xs-down
+    padding: 10px
+    font-size: 15px
+  &__description
+
   & .price-time-info
     display: flex
     gap: 10px
 
     font-size: 25px
+    @include xs-down
+      font-size: 19px
+
     &__title
       text-transform: uppercase
 

@@ -1,4 +1,6 @@
 @import '../../styles/vars.sass'
+@import '../../styles/mixins.sass'
+
 .slider-navigation
   display: flex
   gap: 30px
@@ -6,6 +8,9 @@
   & .arrow
     width: 100px
     cursor: pointer
+    @include sm-down
+      width: 80px
+
     &.previous
       rotate: 180deg
     & *

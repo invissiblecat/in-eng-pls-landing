@@ -3,9 +3,27 @@
 
 .profile
   padding-top: 30px
-  & .wrapper
+
+  @include xl-down
+    margin-bottom: 50px
+
+  @include lg-down
+    margin-bottom: 120px
+  @include md-down
+    margin-bottom: 0px
+  @include sm-down
+    margin-bottom: 70px
+
+  & > .wrapper
     flex-direction: column
     align-items: center
+    @include lg-down
+      padding-left: 0
+      padding-right: 0
+    @include sm-down
+      text-align: center
+    @include xs-down
+      max-height: 500px
   &__title
     font-family: Masvol
     font-size: 120px
@@ -19,28 +37,37 @@
     z-index: 1
 
     @include xl-down
+      transform: translate(10px, 55%)
       font-size: 90px
 
     @include lg-down
       font-size: 70px
     @include md-down
       font-size: 50px
+    @include sm-down
+      font-size: 40px
 
   &__img
     width: 800px
     animation: 3s linear profile-img-scroll
     animation-play-state: paused
     animation-delay: calc(var(--scroll) * -2.3s)
-    @include lg-down
+    @include xl-down
       width: 600px
+    @include lg-down
+      width: 500px
     @include md-down
-      width: 450px
+      width: 300px
+    @include xs-down
+      width: 250px
 
     &-wrapper
       position: relative
       height: 850px
       @include lg-down
         height: 650px
+      @include md-down
+        height: 550px
 
   &__badge
     position: absolute
@@ -51,8 +78,27 @@
     display: flex
     align-items: center
     justify-content: center
+    @include md-down
+      width: 150px
+      height: 150px
+      right: -75px
+    @include sm-down
+      width: 110px
+      height: 110px
+      right: -55px
+    @include xs-down
+      width: 80px
+      height: 80px
+      right: -40px
+
     &__flag
       width: 80px
+      @include md-down
+        width: 65px
+      @include sm-down
+        width: 50px
+      @include xs-down
+        width: 30px
 
     &__title
       position: absolute
@@ -61,10 +107,18 @@
 
       width: 200px
       height: 200px
-
       animation: rotate 2s linear infinite
       animation-play-state: paused
       animation-delay: calc(var(--scroll) * -3s)
+      @include md-down
+        width: 150px
+        height: 150px
+      @include sm-down
+        width: 110px
+        height: 110px
+      @include xs-down
+        width: 80px
+        height: 80px
 
   @keyframes rotate
     to

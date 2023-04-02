@@ -7,13 +7,25 @@
   text-transform: uppercase
 
   padding: 30px 20px
+  @include xl-down
+    padding-left: 100px
+  @include lg-down
+    padding-left: 50px
+  @include md-down
+    padding: 30px
 
   &__logo
     width: 270px
+    @include sm-down
+      width: 190px
+    @include xs-down
+      width: 150px
 
   &__nav
     display: flex
     gap: 30px
+    @include xl-down
+      // padding-right: 150px
     &-item
       transition: all 0.3s
       color: $gray

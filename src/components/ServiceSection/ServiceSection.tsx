@@ -17,7 +17,7 @@ export const ServiceSection: React.FC<ServiceSectionProps> = ({ description, pri
           <div className="price-time-info">
             <div className="price-time-info__title">цена: </div>
             <div className="price-time-info__body">
-              {price} рублей ({minutes} минут)
+              {price} рублей ({minutes}&nbsp;минут)
             </div>
           </div>
         )}

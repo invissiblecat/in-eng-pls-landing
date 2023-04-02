@@ -5,6 +5,8 @@
   font-family: Raleway
   padding-top: 75px
   margin-bottom: 180px
+  @include sm-down
+  padding-left: 30px
 
   &__wrapper
     display: flex
@@ -21,6 +23,11 @@
     align-items: center
     justify-content: space-between
     gap: 90px
+    @include md-down
+      flex-direction: column
+      align-items: flex-start
+      gap: 20px
+      padding-bottom: 20px
 
     &__icon
       cursor: pointer
@@ -44,6 +51,10 @@
         flex-direction: row
         justify-content: space-between
         align-items: center
+      @include md-down
+        flex-direction: column
+        align-items: flex-start
+        gap: 30px
       &-button
         cursor: pointer
         color: $white
@@ -55,6 +66,9 @@
         padding: 15px
         padding-right: 60px
         position: relative
+        @include xs-down
+          font-size: 25px
+
         & > span
           position: relative
           z-index: 1
@@ -80,6 +94,10 @@
     line-height: 30px
     text-align: justify
     max-width: 500px
+    @include sm-down
+      max-width: 430px
+      font-size: 18px
+      text-align: left
 
     &__wrapper
       margin-bottom: 67px
@@ -92,3 +110,5 @@
       text-transform: uppercase
       display: flex
       align-items: end
+      @include sm-down
+        font-size: 30px

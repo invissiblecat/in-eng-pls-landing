@@ -1,23 +1,38 @@
 @import '../../styles/vars.sass'
+@import '../../styles/mixins.sass'
 
 .collapsible
   font-family: Raleway
   font-size: 30px
+  @include md-down
+    font-size: 25px
+  @include sm-down
+    font-size: 22px
+  @include xs-down
+    font-size: 15px
 
   &__header
     display: flex
     align-items: center
-
     justify-content: space-between
 
     border-top: 2px solid $dark-gray
     padding: 20px 50px
+    @include xs-down
+      padding: 20px
     &.open
       border-bottom: none
     &__img
       transition: all 0.2s
       height: 40px
       cursor: pointer
+      @include md-down
+        height: 30px
+      @include sm-down
+        height: 25px
+      @include xs-down
+        height: 20px
+
     & .open
       rotate: 45deg
 
@@ -30,9 +45,9 @@
 
     max-height: 0
     overflow: hidden
+
     &.open
       max-height: 1000px
       transition-timing-function: ease-in
     &.last
-      transition: none
       border-bottom: 2px solid $dark-gray

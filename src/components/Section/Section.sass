@@ -4,28 +4,65 @@
 
 .section
   margin-bottom: 170px
+  @include xl-down
+    margin-bottom: 250px
   @include lg-down
-    margin-bottom: 190px
+    margin-bottom: 250px
+  @include sm-down
+    margin-bottom: 150px
 
   & .wrapper
     justify-content: space-between
+    @include md-down
+      justify-content: center
+      margin: 0
+    @include sm-down
+      display: flex
+      flex-direction: column-reverse !important
+      align-items: center
+
   &__img
     width: 400px
     animation: 1s linear section-img-scroll
     animation-play-state: paused
     animation-delay: calc(var(--scroll) * -0.8s)
+    @include xl-down
+      width: 350px
+      height: 450px
     @include lg-down
       width: 300px
       height: 400px
       animation: 1s linear section-img-scroll-lg
       animation-play-state: paused
       animation-delay: calc(var(--scroll) * -0.8s)
+      margin-left: 20px
+
+    @include md-down
+      width: 270px
+      height: 370px
+
+    @include sm-down
+      width: 250px
+      height: 350px
+      animation: none
+      margin: 0
+
+    @include xs-down
+      width: 200px
+      height: 300px
 
     &__reverse
       width: 400px
       animation: 1s linear section-img-scroll-reverse
       animation-play-state: paused
       animation-delay: calc(var(--scroll) * -0.8s)
+      @include xl-down
+        width: 360px
+        height: 520px
+        animation: 1s linear section-img-scroll-reverse-xl
+        animation-play-state: paused
+        animation-delay: calc(var(--scroll) * -0.8s)
+        margin-right: 50px
       @include lg-down
         width: 300px
         height: 400px
@@ -33,9 +70,26 @@
         animation-play-state: paused
         animation-delay: calc(var(--scroll) * -0.8s)
         margin-right: 20px
+      @include md-down
+        width: 270px
+        height: 390px
+      @include sm-down
+        width: 250px
+        height: 350px
+        margin: 0
+        animation: none
+        @include xs-down
+          width: 200px
+          height: 300px
 
   &__text
     margin-top: 50px
+    @include sm-down
+      margin-top: 20px
+
+  &__title
+    @include sm-down
+      display: none
   &__description
     padding-top: 12%
     max-width: 490px
@@ -48,6 +102,14 @@
       max-width: 340px
       padding-top: 5%
       font-size: 16px
+    @include md-down
+      max-width: 260px
+      font-size: 14px
+      text-align: left
+    @include sm-down
+      font-size: 17px
+      padding: 0
+
     &__reverse
       padding-top: 12%
       max-width: 523px
@@ -59,6 +121,13 @@
         padding-top: 5%
         font-size: 16px
         max-width: 371px
+      @include md-down
+        max-width: 254px
+        font-size: 15px
+      @include sm-down
+        font-size: 17px
+        text-align: left
+        padding-right: 10px
 
 @keyframes section-img-scroll
   from
@@ -78,8 +147,14 @@
   to
     transform: translateY(-390%)
 
+@keyframes section-img-scroll-reverse-xl
+  from
+    transform: translateY(215%)
+  to
+    transform: translateY(-400%)
+
 @keyframes section-img-scroll-reverse-lg
   from
     transform: translateY(215%)
   to
-    transform: translateY(-440%)
+    transform: translateY(-420%)
