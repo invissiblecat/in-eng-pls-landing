@@ -53,8 +53,8 @@ export const ReviewSlider: React.FC = () => {
   return (
     <div className="review-slider" id="reviews">
       <div className="wrapper">
+        <SectionTitle title="reviews" translation="отзывы" />
         <div className="slider-wrapper">
-          <SectionTitle title="reviews" translation="отзывы" />
           <Swiper spaceBetween={400} slidesPerView={1} scrollbar={{ hide: true, enabled: false }}>
             <SliderNavigation />
             {reviews.map(({ name, photo, review }) => (

@@ -48,10 +48,12 @@
       left: 10%
     @include md-down
       bottom: -7%
-
     @include sm-down
       left: 9%
       bottom: -5%
+    @include xs-down
+      left: 8%
+      bottom: -5.2%
 
   &:after
     content: ''
@@ -80,6 +82,8 @@
       bottom: -3.5%
       left: 15%
       z-index: -1
+    @include xs-down
+      bottom: -3.4%
 
 .reviewer-info
   display: flex
