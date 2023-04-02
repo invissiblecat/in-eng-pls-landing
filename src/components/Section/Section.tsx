@@ -39,11 +39,13 @@ export const Section: React.FC<SectionProps> = ({
             </p>
           </FadeInOnScroll>
         </div>
-        <img
-          className={reverse ? "section__img__reverse" : "section__img"}
-          src={imgSrc}
-          alt={title}
-        />
+        <FadeInOnScroll>
+          <img
+            className={reverse ? "section__img__reverse" : "section__img"}
+            src={imgSrc}
+            alt={title}
+          />
+        </FadeInOnScroll>
       </div>
     </section>
   );

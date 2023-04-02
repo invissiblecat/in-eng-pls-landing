@@ -20,6 +20,7 @@
       display: flex
       flex-direction: column-reverse !important
       align-items: center
+      justify-content: center
 
   &__img
     width: 400px
@@ -44,12 +45,12 @@
     @include sm-down
       width: 250px
       height: 350px
-      animation: none
+      animation: section-img-scroll-sm
       margin: 0
 
     @include xs-down
-      width: 200px
-      height: 300px
+      width: 220px
+      height: 320px
 
     &__reverse
       width: 400px
@@ -73,14 +74,17 @@
       @include md-down
         width: 270px
         height: 390px
+        animation: 1s linear section-img-scroll-reverse-md
+        animation-play-state: paused
+        animation-delay: calc(var(--scroll) * -0.8s)
       @include sm-down
         width: 250px
         height: 350px
         margin: 0
-        animation: none
-        @include xs-down
-          width: 200px
-          height: 300px
+        animation: section-img-scroll-sm
+      @include xs-down
+        width: 220px
+        height: 320px
 
   &__text
     margin-top: 50px
@@ -88,8 +92,6 @@
       margin-top: 20px
 
   &__title
-    @include sm-down
-      display: none
   &__description
     padding-top: 12%
     max-width: 490px
@@ -103,12 +105,14 @@
       padding-top: 5%
       font-size: 16px
     @include md-down
-      max-width: 260px
+      max-width: 250px
       font-size: 14px
       text-align: left
     @include sm-down
       font-size: 17px
       padding: 0
+    @include xs-down
+      max-width: 300px
 
     &__reverse
       padding-top: 12%
@@ -122,12 +126,12 @@
         font-size: 16px
         max-width: 371px
       @include md-down
-        max-width: 254px
+        max-width: 250px
         font-size: 15px
       @include sm-down
         font-size: 17px
         text-align: left
-        padding-right: 10px
+        padding: 0
 
 @keyframes section-img-scroll
   from
@@ -158,3 +162,15 @@
     transform: translateY(215%)
   to
     transform: translateY(-420%)
+
+@keyframes section-img-scroll-reverse-md
+  from
+    transform: translateY(175%)
+  to
+    transform: translateY(-420%)
+
+@keyframes section-img-scroll-sm
+  from
+    transform: translateY(0)
+  to
+    transform: translateY(0%)

@@ -29,7 +29,7 @@ export const CollapsibleList: React.FC<CollapsibleListProps> = ({}) => {
           </Collapsible>
           <Collapsible title="Программа «Групповое»">
             <ServiceSection
-              description="Групповые Занятия в мини-группе (3-4 человека)"
+              description="Групповые Занятия в мини-группе (3&nbsp;-&nbsp;4&nbsp;человека)"
               price={"800"}
               minutes={60}
             />
