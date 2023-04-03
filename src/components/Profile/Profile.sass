@@ -2,7 +2,6 @@
 @import '../../styles/mixins.sass'
 
 .profile
-  padding-top: 30px
   overflow: hidden
 
   @include xl-down
@@ -10,10 +9,11 @@
 
   @include lg-down
     margin-bottom: 120px
-  @include md-down
-    margin-bottom: 0px
   @include sm-down
-    margin-bottom: 30px
+    margin-bottom: 0
+    padding-bottom: 30px
+  @include xs-down
+    padding-bottom: 220px
 
   & > .wrapper
     flex-direction: column
@@ -28,7 +28,7 @@
   &__title
     font-family: Masvol
     font-size: 120px
-    letter-spacing: 10px
+    letter-spacing: 3px
     color: $white
     text-transform: uppercase
 
@@ -44,9 +44,10 @@
     @include lg-down
       font-size: 70px
     @include md-down
-      font-size: 50px
-    @include sm-down
-      font-size: 40px
+      font-size: 65px
+      margin-bottom: 30px
+    @include xs-down
+      font-size: 55px
 
   &__img
     width: 800px
@@ -58,17 +59,14 @@
     @include lg-down
       width: 500px
     @include md-down
-      width: 300px
+      width: 380px
+    @include sm-down
+      animation: none
+      padding-bottom: 45px
     @include xs-down
-      width: 250px
-
+      padding-bottom: 60px
     &-wrapper
       position: relative
-      height: 850px
-      @include lg-down
-        height: 650px
-      @include md-down
-        height: 550px
 
   &__badge
     position: absolute
@@ -84,22 +82,27 @@
       height: 150px
       right: -75px
     @include sm-down
-      width: 110px
-      height: 110px
-      right: -55px
-    @include xs-down
-      width: 80px
-      height: 80px
-      right: -40px
+      display: none
+
+    &__bottom
+      display: none
+      width: 200px
+      height: 200px
+      @include sm-down
+        display: flex
+        align-items: center
+        justify-content: center
 
     &__flag
       width: 80px
       @include md-down
         width: 65px
-      @include sm-down
-        width: 50px
-      @include xs-down
-        width: 30px
+      &__bottom
+        @include sm-down
+          width: 60px
+        @include xs-down
+          width: 50px
+          position: relative
 
     &__title
       position: absolute
@@ -114,12 +117,19 @@
       @include md-down
         width: 150px
         height: 150px
-      @include sm-down
-        width: 110px
-        height: 110px
-      @include xs-down
-        width: 80px
-        height: 80px
+      &__bottom
+        position: absolute
+        width: 200px
+        height: 200px
+        animation: rotate 2s linear infinite
+        animation-play-state: paused
+        animation-delay: calc(var(--scroll) * -3s)
+        @include sm-down
+          width: 150px
+          height: 150px
+        @include xs-down
+          width: 120px
+          height: 120px
 
   @keyframes rotate
     to
@@ -130,3 +140,9 @@
       transform: translateY(0%)
     to
       transform: translateY(-300%)
+
+  @keyframes profile-img-none
+    from
+      transform: translateY(0%)
+    to
+      transform: translateY(0%)

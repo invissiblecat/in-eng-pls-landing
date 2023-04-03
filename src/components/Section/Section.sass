@@ -43,10 +43,7 @@
       height: 370px
 
     @include sm-down
-      width: 250px
-      height: 350px
-      animation: section-img-scroll-sm
-      margin: 0
+      display: none
 
     @include xs-down
       width: 220px
@@ -78,13 +75,14 @@
         animation-play-state: paused
         animation-delay: calc(var(--scroll) * -0.8s)
       @include sm-down
-        width: 250px
-        height: 350px
+        width: 360px
+        height: 460px
         margin: 0
+        padding-bottom: 50px
         animation: section-img-scroll-sm
       @include xs-down
-        width: 220px
-        height: 320px
+        width: 300px
+        height: 400px
 
   &__text
     margin-top: 50px

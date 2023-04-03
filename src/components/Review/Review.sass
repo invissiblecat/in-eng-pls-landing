@@ -13,10 +13,14 @@
 
   width: 100%
 
-  padding: 30px 0
+  padding-top: 70px
 
   min-height: 60%
+  @include sm-down
+    min-height: 80%
 
+  @include xl-down
+    padding: 30px 0
   @include sm-down
     flex-direction: column
     gap: 30px
@@ -37,53 +41,52 @@
     position: absolute
     width: 70px
     height: 70px
-    bottom: -16%
+    bottom: -13%
     left: 10%
     background-color: $review-gray
     z-index: -1
     @include xl-down
       bottom: -14%
     @include lg-down
-      bottom: -11%
+      bottom: -9%
       left: 10%
     @include md-down
       bottom: -7%
     @include sm-down
-      left: 9%
-      bottom: -5%
-    @include xs-down
-      left: 8%
-      bottom: -5.2%
+      display: none
+    //   left: 9%
+    //   bottom: -5%
+    // @include xs-down
+    //   left: 8%
+    //   bottom: -4.6%
 
   &:after
     content: ''
     position: absolute
     width: 70px
     height: 80px
-    bottom: -12.5%
-    left: 12.7%
-    rotate: 34deg
+    bottom: -10%
+    left: 12%
+    rotate: 26deg
     background-color: $review-gray
     z-index: -1
     @include xl-down
-      bottom: -11%
-      left: 13%
+      bottom: -11.5%
+      left: 12.5%
     @include lg-down
-      bottom: -8.1%
-      left: 14%
-      rotate: 34deg
+      bottom: -7.2%
+      left: 13.4%
     @include md-down
-      bottom: -5.8%
-      left: 14.5%
+      bottom: -5.2%
+      left: 14%
       rotate: 27deg
     @include sm-down
-      width: 70px
-      height: 80px
-      bottom: -3.5%
-      left: 15%
-      z-index: -1
-    @include xs-down
-      bottom: -3.4%
+      display: none
+    //   bottom: -3.5%
+    //   left: 13.2%
+    //   z-index: -1
+    // @include xs-down
+    //   bottom: -3%
 
 .reviewer-info
   display: flex

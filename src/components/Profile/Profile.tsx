@@ -24,6 +24,14 @@ export const Profile: React.FC = () => {
             />
           </FadeInOnScroll>
         </FadeInOnScroll>
+        <FadeInOnScroll delay={1.5} className="profile__badge__bottom">
+          <img className="profile__badge__flag__bottom" src={Flag} alt="flag"></img>
+          <img
+            className="profile__badge__title__bottom"
+            src={LearnIsEasy}
+            alt="учить английский это просто"
+          />
+        </FadeInOnScroll>
       </div>
     </div>
   );
