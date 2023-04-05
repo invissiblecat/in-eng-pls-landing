@@ -1,7 +1,7 @@
 import React from "react";
 import Flag from "../../assets/icons/flag.png";
 import LearnIsEasy from "../../assets/icons/learn-is-easy.svg";
-import ProfilePic from "../../assets/icons/profile.png";
+import ProfilePic from "../../assets/icons/profile.jpg";
 import { FadeInOnScroll } from "../FadeInOnScroll/FadeInOnScroll";
 
 import "./Profile.sass";
