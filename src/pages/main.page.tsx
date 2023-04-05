@@ -1,6 +1,6 @@
 import React from "react";
-import About from "../assets/icons/about.png";
-import Edu from "../assets/icons/edu.png";
+import About from "../assets/icons/about.jpg";
+import Edu from "../assets/icons/edu.jpg";
 import { CollapsibleList } from "../components/CollapsibleList/CollapsibleList";
 import { Contacts } from "../components/Contacts/Contacts";
 import { Footer } from "../components/Footer/Footer";
