@@ -3,16 +3,24 @@
 
 .profile
   overflow: hidden
+  height: 938px
 
   @include xl-down
+    height: 790px
     margin-bottom: 50px
 
   @include lg-down
-    margin-bottom: 120px
+    height: 650px
+
+  @include md-down
+    height: 550px
+
   @include sm-down
+    height: 770px
     margin-bottom: 0
-    padding-bottom: 30px
+    padding-bottom: 80px
   @include xs-down
+    height: 550px
     padding-bottom: 220px
 
   & > .wrapper
