@@ -16,21 +16,21 @@ export const CollapsibleList: React.FC<CollapsibleListProps> = ({}) => {
           <Collapsible title="Программа «Индивидуальный»">
             <ServiceSection
               description="Занятия по индивидуальному плану один на один с преподавателем"
-              price={"2 000"}
+              // price={"2 000"}
               minutes={60}
             />
           </Collapsible>
           <Collapsible title="Программа «Парное»">
             <ServiceSection
               description="Занятия вдвоем, подберу вам собеседника или можете позвать с собой подругу / друга"
-              price={"1 200"}
+              // price={"1 200"}
               minutes={60}
             />
           </Collapsible>
           <Collapsible title="Программа «Групповое»">
             <ServiceSection
               description="Групповые Занятия в мини-группе (3&nbsp;-&nbsp;4&nbsp;человека)"
-              price={"1000"}
+              // price={"1000"}
               minutes={60}
             />
           </Collapsible>
@@ -41,7 +41,7 @@ export const CollapsibleList: React.FC<CollapsibleListProps> = ({}) => {
           >
             <ServiceSection
               description="Помогу с планированием урока, подбором учебников, обучающих платформ, отвечу на все ваши вопросы, связанные с преподаванием детям и взрослым"
-              price={"5 000"}
+              // price={"5 000"}
               minutes={120}
             ></ServiceSection>
           </Collapsible>

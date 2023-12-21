@@ -13,11 +13,11 @@ export const ServiceSection: React.FC<ServiceSectionProps> = ({ description, pri
     <div className="service-section">
       <div className="service-section__description">{description}</div>
       <div className="service-section__price">
-        {minutes && price && (
+        {minutes  && ( //&& price
           <div className="price-time-info">
-            <div className="price-time-info__title">цена: </div>
+            {/* <div className="price-time-info__title">цена: </div> */}
             <div className="price-time-info__body">
-              {price} рублей ({minutes}&nbsp;минут)
+              {/* {price} рублей  */}{minutes}&nbsp;минут
             </div>
           </div>
         )}
